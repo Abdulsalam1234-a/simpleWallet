@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Simple Wallet</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/ethers@5.7.2/dist/ethers.umd.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Simple Wallet (DApp)</h1>
+
+    <button onclick="connectWallet()">Connect Wallet</button>
+    <p id="walletAddress">Wallet: Not connected</p>
+
+    <h3>Deposit ETH</h3>
+    <input type="number" id="depositAmount" placeholder="Amount in ETH">
+    <button onclick="deposit()">Deposit</button>
+
+    <h3>My Balance</h3>
+    <button onclick="getMyBalance()">Check Balance</button>
+    <p id="myBalance">0 ETH</p>
+
+    <h3>Contract Balance</h3>
+    <button onclick="getContractBalance()">Check Contract Balance</button>
+    <p id="contractBalance">0 ETH</p>
+
+    <h3>Withdraw (Owner Only)</h3>
+    <input type="number" id="withdrawAmount" placeholder="Amount in ETH">
+    <button onclick="withdraw()">Withdraw</button>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
